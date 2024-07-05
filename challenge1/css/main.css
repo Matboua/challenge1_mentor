@@ -1,0 +1,133 @@
+/* Start Variables */
+:root {
+  --main-color: hsl(179, 62%, 43%);
+  --main-opa-color: hsla(179, 62%, 43%, 0.596);
+  --secondary-color: hsl(71, 73%, 54%);
+  --p-main-color: hsl(218, 22%, 67%);
+  --p-secondary-color: hsl(204, 43%, 93%);
+  --shadow-color: #00000030;
+}
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Karla", sans-serif;
+}
+/* End Global Rules */
+
+/* Start Styling */
+section {
+  min-height: 100vh;
+  background-color: var(--p-secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.container {
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px var(--shadow-color);
+}
+.item {
+  padding: 30px;
+}
+
+/* Start item 1 */
+.item-1 {
+  background-color: #fff;
+}
+.item-1 h3 {
+  color: var(--main-color);
+  margin-bottom: 20px;
+  font-size: 21px;
+}
+.item-1 h4 {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+.item-1 p {
+  color: var(--p-main-color);
+  line-height: 1.8;
+}
+
+/* Start item 2 */
+.item-2 {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.item-2 h4 {
+  margin-bottom: 15px;
+}
+.item-2 p span {
+  font-weight: 700;
+  font-size: 27px;
+  color: #fff;
+  margin-right: 12px;
+}
+.item-2 p:first-of-type {
+  display: flex;
+  align-items: center;
+  color: var(--p-secondary-color);
+  margin-bottom: 15px;
+}
+.item-2 p:last-of-type {
+  margin-bottom: 35px;
+}
+.item-2 .button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px var(--shadow-color);
+}
+
+/* Start item 3 */
+.item-3 {
+  background-color: var(--main-opa-color);
+  color: var(--p-secondary-color);
+}
+.item-3 h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+.item-3 p {
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+/* End Styling */
+
+/* Start Media */
+@media (max-width: 405px) {
+  section {
+    padding: 0;
+  }
+  .container {
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 660px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  .item-1 {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+}
+/* End Media */
